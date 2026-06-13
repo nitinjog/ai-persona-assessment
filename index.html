@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A playful LinkedIn satire quiz that reveals your AI update persona.">
+    <title>The LinkedIn AI Persona Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">No email. No backend. Maximum harmless self-importance.</p>
+          <h1 id="page-title">The LinkedIn AI Persona Assessment</h1>
+          <p>
+            Find out whether your AI fluency is actual signal, recycled carousel wisdom,
+            or a screenshot of a podcast quote pretending to be strategy.
+          </p>
+        </div>
+        <div class="signal-board" aria-hidden="true">
+          <div class="post-card active">
+            <span class="avatar-dot"></span>
+            <div>
+              <strong>AI thought leader</strong>
+              <p>Just discovered agents. Calling them interns now.</p>
+            </div>
+          </div>
+          <div class="post-card">
+            <span class="avatar-dot blue"></span>
+            <div>
+              <strong>Model whisperer</strong>
+              <p>Can name three Chinese models and still attend standup.</p>
+            </div>
+          </div>
+          <div class="post-card">
+            <span class="avatar-dot gold"></span>
+            <div>
+              <strong>Prompt realist</strong>
+              <p>Counts strawberry letters before posting benchmark takes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment" aria-live="polite">
+        <div id="intro" class="panel">
+          <div>
+            <p class="section-kicker">12 questions</p>
+            <h2>Measure your AI update aura.</h2>
+            <p>
+              This is not a technical exam. It is a social diagnostic for people who say
+              "agentic workflow" with a straight face.
+            </p>
+          </div>
+          <button id="start-btn" class="primary-btn">Start assessment</button>
+        </div>
+
+        <form id="quiz" class="quiz hidden">
+          <div class="quiz-topline">
+            <span id="progress-label">Question 1 of 12</span>
+            <span id="score-hint">Choose the answer that sounds most like you.</span>
+          </div>
+          <div class="meter" aria-hidden="true"><span id="meter-fill"></span></div>
+          <fieldset id="question-card" class="question-card"></fieldset>
+          <div class="quiz-actions">
+            <button type="button" id="back-btn" class="secondary-btn">Back</button>
+            <button type="button" id="next-btn" class="primary-btn">Next</button>
+          </div>
+        </form>
+
+        <section id="result" class="result hidden" aria-labelledby="result-title">
+          <div class="result-card" id="result-card">
+            <div class="result-meta">
+              <span id="result-level">Level 1</span>
+              <span id="result-score">0/48</span>
+            </div>
+            <div id="persona-art" class="persona-art" aria-hidden="true"></div>
+            <p class="section-kicker">Your LinkedIn AI persona</p>
+            <h2 id="result-title"></h2>
+            <p id="result-summary"></p>
+            <div id="result-badges" class="badges"></div>
+          </div>
+          <div class="result-actions">
+            <button type="button" id="copy-btn" class="secondary-btn">Copy LinkedIn post</button>
+            <button type="button" id="share-btn" class="primary-btn">Share result</button>
+            <button type="button" id="download-btn" class="secondary-btn">Download PNG card</button>
+            <button type="button" id="restart-btn" class="text-btn">Retake assessment</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
